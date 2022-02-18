@@ -1,0 +1,12 @@
+<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+
+  <p class="h4 mb-4">Enter stock details</p> <hr>
+  Stock Id: <input type="number" formControlName="stockId" placeholder="Enter Stock Id" /><br /> <hr>
+  Company Code: <input type="String" formControlName="companyCode" placeholder="Enter Company Code" /><br /> <hr>
+  Stock Price: <input type="number" formControlName="stockPrice" placeholder="Enter Stock Price CEO" /><br /> <hr>
+  Stock Exchange: <input type="String" formControlName="stockExchange" placeholder="Enter Stock Exchange" /><br /> <hr>
+  Start Date: <input type="String" formControlName="startDate" placeholder="Enter Start Date" /><br /> <hr>
+  End Date: <input type="String" formControlName="endDate" placeholder="Enter End Date" /><br /> <hr>
+  <br>
+  <button class="btn btn-info my-4 btn-block" type="submit" [disabled]="adminForm.invalid">Add Stock..</button>
+</form>

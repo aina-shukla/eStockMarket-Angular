@@ -1,0 +1,37 @@
+p{
+    font-size: 1.5em;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: rgb(16, 70, 70);
+    padding-left: 30px;
+  }
+
+#button {
+    line-height: 12px;
+    width: 100px;
+    font-size:  1em;
+    font-family: tahoma;
+    margin-top: 100px;
+    margin-right: 50px;
+    position:absolute;
+    top:0;
+    right:0;
+    size: 200px;
+}
+
+tr{
+    position: center;
+    top: 10px;
+    left: 8px;
+    font-size: 1.2em;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: black;
+    padding-left: 100px;
+    border-color: black;
+    width: 10px;
+background-color: silver;
+}
+
+table, th, td {
+    border:2px solid black;
+    padding-block-end: 1px;
+  }

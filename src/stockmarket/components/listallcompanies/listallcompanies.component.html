@@ -1,0 +1,26 @@
+<p>Welcome to Stock Market</p>  <hr>
+<p>Click to view all companies <br><br><button type="button" (click)="findAllCompanies()">Search..</button></p> 
+
+<table>
+
+  <tr *ngIf="companies.length>0">
+      <th>Company Code</th>
+      <th>Company Name ID</th>
+      <th>Company CEO</th>
+      <th>Company Turnover</th>
+      <th>Company Website</th>
+      <th>Stock Exchange</th>
+      <th>Delete Company</th>
+  </tr>
+
+  <tr *ngFor="let companyEntity of companies">
+      <td>{{companyEntity.companyCode}}</td>
+      <td>{{companyEntity.companyName}}</td>
+      <td>{{companyEntity.companyCEO}}</td>
+      <td>{{companyEntity.companyTurnover}}</td>
+      <td>{{companyEntity.companyWebsite}}</td>
+      <td>{{companyEntity.stockExchange}}</td>
+      <td><button (click)="deleteCompany(companyEntity.companyCode)">Delete Company</button></td>
+  </tr>
+
+</table>

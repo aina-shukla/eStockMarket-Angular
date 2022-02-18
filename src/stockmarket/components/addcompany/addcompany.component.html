@@ -1,0 +1,13 @@
+<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+
+  <p class="h4 mb-4">Enter company
+    details to register new company</p> <hr>
+  Company Code: <input type="text" formControlName="companyCode" placeholder="Enter Company Code" /><br /> <hr>
+  Company Name: <input type="text" formControlName="companyName" placeholder="Enter Company Name" /><br /> <hr>
+  Company CEO: <input type="text" formControlName="companyCEO" placeholder="Enter Company CEO" /><br /> <hr>
+  Company Turnover: <input type="number" formControlName="companyTurnover" placeholder="Enter Company Turnover" /><br /> <hr>
+  Company Website: <input type="text" formControlName="companyWebsite" placeholder="Enter Company Website" /><br /> <hr>
+  Stock Exchange: <input type="boolean" formControlName="stockExchange" placeholder="Enter Stock Exchange" /><br /> <hr>
+  <br>
+  <button class="btn btn-info my-4 btn-block" type="submit" [disabled]="adminForm.invalid">Register..</button>
+</form>

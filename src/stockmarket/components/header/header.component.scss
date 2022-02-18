@@ -1,0 +1,33 @@
+header {
+    //border: 1px solid white;
+    font-size: 0.9em;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: black;
+    background-color: white;
+    padding-bottom: 5px;
+}
+
+a:link {
+  background-color: white;
+  text-emphasis-color: black;
+  color: black;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: black;
+  display: inline-block;
+  text-shadow: 2em;
+}
+
+.topnav-right {
+    float: right;
+    padding-top: 40px;
+  }
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+img {
+    padding-top: 15px; 
+}
