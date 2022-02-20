@@ -1,0 +1,41 @@
+<p>Welcome to Stock Market</p>
+
+<p class="error" *ngIf="message.length>0">{{message}}</p>
+
+<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+
+  <p class="h4 mb-4">Enter details of stock</p>
+  <hr>
+  Company Code: <input type="text" formControlName="companyCode" placeholder="Enter Company Code" />
+
+  Start Date: <input type="date" formControlName="startDate" placeholder="" />
+
+  End Date: <input type="date" formControlName="endDate" placeholder="" /><br />
+
+  <hr><br>
+  <button class="btn btn-info my-4 btn-block" type="submit" [disabled]="adminForm.invalid">Find..</button>
+</form>
+
+<br><br>
+
+<table>
+
+  <tr *ngIf="stock.length>0">
+    <th>Stock ID</th>
+    <th>Company Code</th>
+    <th>Stock Price</th>
+    <th>Stock Exchange</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+  </tr>
+
+  <tr *ngFor="let stockEntity of stock">
+    <td>{{stockEntity.stockId}}</td>
+    <td>{{stockEntity.companyCode}}</td>
+    <td>{{stockEntity.stockPrice}}</td>
+    <td>{{stockEntity.stockExchange}}</td>
+    <td>{{stockEntity.startDate}}</td>
+    <td>{{stockEntity.endDate}}</td>
+  </tr>
+
+</table>

@@ -12,33 +12,7 @@ import { CompanyService } from 'src/stockmarket/services/companyService/company.
 
 export class HomeComponent {
 
-    userForm: FormGroup;
-    company: CompanyEntity[] = [];
+    constructor() {    }
 
-    constructor(private router: Router, private companyService: CompanyService) {
-        this.userForm = new FormGroup({
-            "companyCode": new FormControl("", [
-                Validators.required,
-                Validators.minLength(3)
-            ])
-        });
-    }
-
-    onSubmit() {
-        console.log(this.userForm)
-        console.log(this.userForm.value)
-        let companyCode = this.userForm.value.companyCode;
-        this.findACompany(companyCode);
-    }
-
-    findACompany(companyCode: String) {
-        this.companyService.findCompany(companyCode).subscribe((res: any) => {
-            console.log(res);
-            this.company = res;
-
-            
-        })
-
-    }
-
+    
 }

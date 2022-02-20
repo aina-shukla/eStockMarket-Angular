@@ -33,7 +33,7 @@ export class AddCompanyComponent {
       this.companyService.registerCompany(company).subscribe((res: any) => {
         console.log(res);
         window.alert("Company registered");
-        this.router.navigateByUrl("/home");
+        this.router.navigateByUrl("/listallcompanies");
       })
     }
     else {

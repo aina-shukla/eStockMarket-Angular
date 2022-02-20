@@ -1,0 +1,34 @@
+<p>Welcome to Stock Market</p>
+
+<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+  <p>Find Company </p>
+  <hr> Enter Company Code: <input type="text" formControlName="companyCode" placeholder="Enter Company Code" />
+  <br>
+
+  <hr><br>
+  <button class="btn btn-info my-4 btn-block" type="submit" [disabled]="adminForm.invalid">Search..</button>
+</form>
+
+<br><br>
+
+<table>
+
+  <tr *ngIf="company.length>0">
+    <th>Company Code</th>
+    <th>Company Name</th>
+    <th>Company CEO</th>
+    <th>Company Turnover</th>
+    <th>Company Website</th>
+    <th>Stock Exchange</th>
+  </tr>
+
+  <tr *ngFor="let companyEntity of company">
+    <td>{{companyEntity.companyCode}}</td>
+    <td>{{companyEntity.companyName}}</td>
+    <td>{{companyEntity.companyCEO}}</td>
+    <td>{{companyEntity.companyTurnover}}</td>
+    <td>{{companyEntity.companyWebsite}}</td>
+    <td>{{companyEntity.stockExchange}}</td>
+  </tr>
+
+</table>

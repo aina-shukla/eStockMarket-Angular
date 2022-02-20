@@ -6,7 +6,7 @@ export class CompanyEntity {
         public companyCEO: String,
         public companyTurnover: number,
         public companyWebsite: String,
-        public stockExchange: boolean
+        public stockExchange: String
     ) { }
 
 }

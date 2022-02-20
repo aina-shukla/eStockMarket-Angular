@@ -1,12 +1,28 @@
+<p>Welcome to Stock Market</p>
+<br>
 <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
 
   <p class="h4 mb-4">Enter stock details</p> <hr>
   Stock Id: <input type="number" formControlName="stockId" placeholder="Enter Stock Id" /><br /> <hr>
   Company Code: <input type="String" formControlName="companyCode" placeholder="Enter Company Code" /><br /> <hr>
   Stock Price: <input type="number" formControlName="stockPrice" placeholder="Enter Stock Price CEO" /><br /> <hr>
-  Stock Exchange: <input type="String" formControlName="stockExchange" placeholder="Enter Stock Exchange" /><br /> <hr>
-  Start Date: <input type="String" formControlName="startDate" placeholder="Enter Start Date" /><br /> <hr>
-  End Date: <input type="String" formControlName="endDate" placeholder="Enter End Date" /><br /> <hr>
+
+  <label for="stockExchange">Stock Exchange:</label>
+
+  <select name="stockExchange" formControlName="stockExchange" placeholder="Enter Stock Exchange" id="stockExchange">
+    <option value="" selected disabled hidden>Select an Option</option>
+    <option value="nse">NSE</option>
+    <option value="bse">BSE</option>
+    <option value="NASDAQ">NASDAQ</option>
+    <option value="euronext">Euronext</option>
+    <option value="sensex">Sensex</option>
+    <option value="nifty">Nifty</option>
+    <option value="maruti">Maruti</option>
+    <option value="itc">ITC</option>
+  </select>
+<br><hr>
+  Start Date: <input type="date" formControlName="startDate" placeholder="Enter Start Date" /><br /> <hr>
+  End Date: <input type="date" formControlName="endDate" placeholder="Enter End Date" /><br /> <hr>
   <br>
   <button class="btn btn-info my-4 btn-block" type="submit" [disabled]="adminForm.invalid">Add Stock..</button>
 </form>

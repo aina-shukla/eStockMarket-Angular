@@ -11,8 +11,12 @@ export class StockService {
   private host: string = "http://localhost:8082";
   constructor(private httpClient: HttpClient) { }
 
-  addStockPrices(companyCode: String, stockEntity : StockEntity){
-    return this.httpClient.post(this.host+"/add/"+companyCode, stockEntity);
+  addStockPrices(companyCode: String, stockEntity: StockEntity) {
+    return this.httpClient.post(this.host + "/add/" + companyCode, stockEntity);
+  }
+
+  findStock(companyCode: String, startDate: String, endDate: String) {
+    return this.httpClient.get(this.host + "/get/" + companyCode + "/" + startDate + "/" + endDate);
   }
 
 }

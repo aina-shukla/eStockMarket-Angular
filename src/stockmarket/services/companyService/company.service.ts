@@ -12,7 +12,7 @@ export class CompanyService {
   private hostUrl: string = "http://localhost:8081/admin/login";
   constructor(private httpClient: HttpClient) { }
 
-  findCompany(companyCode: String) {
+  findSingleCompany(companyCode: String) {
     return this.httpClient.get(this.host + "/info/" + companyCode);
   }
 

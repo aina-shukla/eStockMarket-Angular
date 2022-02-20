@@ -1,10 +1,14 @@
 
     form{
         padding-left: 35px;
+        padding-bottom: 45px;
         font-size: 1em;
         font-family: "Lucida Console", "Courier New", monospace;
         color: rgb(53, 40, 40);
-       
+        border-left: 3px solid #000;
+        border-right: 3px solid black;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
     }
   
     p{
